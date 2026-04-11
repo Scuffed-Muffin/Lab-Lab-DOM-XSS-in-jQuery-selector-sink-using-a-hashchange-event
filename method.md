@@ -12,3 +12,4 @@ $(window).on('hashchange', function(){
   if (post) post.get(0).scrollIntoView();
 });
 ```
+This meant that all that I had to do was submit this payload:```<iframe src="https://vulnerable-website.com#" onload="this.src+='<img src=1 onerror=print("Done")>'"> ``` into
